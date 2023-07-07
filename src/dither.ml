@@ -1,9 +1,7 @@
 open Core
 
 let check_bounds image x y =
-  if x < 0 || x >= Image.width image || y < 0 || y >= Image.height image
-  then false
-  else true
+  not (x < 0 || x >= Image.width image || y < 0 || y >= Image.height image)
 ;;
 
 let set_adjacent image x y error =
